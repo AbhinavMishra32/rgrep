@@ -1,0 +1,54 @@
+   0.125121542s  INFO prepare_target{force=false package_id=rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core) target="rgrep_core"}: cargo::core::compiler::fingerprint: fingerprint error for rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rgrep_core", ["lib"], "/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core/src/lib.rs", Edition2024) }
+   0.125821708s  INFO prepare_target{force=false package_id=rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core) target="rgrep_core"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core/target/debug/.fingerprint/rgrep_core-b415988ce0beab7b/lib-rgrep_core`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.158916500s  INFO prepare_target{force=false package_id=rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core) target="rgrep_core"}: cargo::core::compiler::fingerprint: fingerprint error for rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("rgrep_core", ["lib"], "/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core/src/lib.rs", Edition2024) }
+   0.158931208s  INFO prepare_target{force=false package_id=rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core) target="rgrep_core"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core/target/debug/.fingerprint/rgrep_core-5681ee5a687c5713/test-lib-rgrep_core`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+    Checking rgrep_core v0.1.0 (/Users/abhinavmishra/solin/aug2026/rgrep/rgrep_core)
+error: could not compile `rgrep_core` (lib test) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rgrep_core` (lib) due to 3 previous errors
